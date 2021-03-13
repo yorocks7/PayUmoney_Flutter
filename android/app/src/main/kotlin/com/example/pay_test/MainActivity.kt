@@ -40,7 +40,7 @@ class MainActivity: FlutterActivity() {
 
         builder.setAmount(""+call.argument("amount"))
                 .setTxnId(""+call.argument("txnid"))
-                .setPhone("7979775977")
+                .setPhone(""+call.argument("phone"))
                 .setProductName(""+call.argument("productinfo"))
                 .setFirstName(""+call.argument("firstname"))
                 .setEmail(""+call.argument("email"))
@@ -49,8 +49,8 @@ class MainActivity: FlutterActivity() {
                 .setUdf1(""+call.argument("udf1"))
                 .setUdf2(""+call.argument("udf2"))
                 .setIsDebug(true)
-                .setKey("abc")
-                .setMerchantId("def")
+                .setKey(""+call.argument("key"))
+                .setMerchantId(""+call.argument("key"))
 
         val paymentParam: PayUmoneySdkInitializer.PaymentParam = builder.build()
         paymentParam.setMerchantHash(call.argument("hashh"))
