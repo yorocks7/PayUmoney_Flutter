@@ -60,16 +60,18 @@ class _MyAppState extends State<MyApp> {
                           'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InRlc3RVc2VyNEBkZWx4LmluIiwiZXhwIjoxNjE5NjE0MTAxfQ.vY4K1AnmovMp_p_k2fMFpH4M4SMQfXp9iDdG_OUrDgM',
                     };
 
-                    var url = 'http://6c6c374c725d.ngrok.io/v1/payment/pay';
+                    var url = 'https://api.delx.in/v1/payment/pay';
                     var response = await http.post(
                       url,
                       headers: headers,
                       body: jsonEncode(data),
                     );
 
-                    print('res - ' + json.decode(response.body.toString()).toString());
+                    print('res - ' +
+                        json.decode(response.body.toString()).toString());
 
-                    final res = json.decode(response.body.toString())['payload'];
+                    final res =
+                        json.decode(response.body.toString())['payload'];
 
                     if (response.statusCode == 200) {
                       print("initPayment called");

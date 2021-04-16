@@ -46,8 +46,6 @@ class MainActivity: FlutterActivity() {
                 .setEmail(""+call.argument("email"))
                 .setsUrl(""+call.argument("surl"))
                 .setfUrl(""+call.argument("furl"))
-                .setUdf1(""+call.argument("udf1"))
-                .setUdf2(""+call.argument("udf2"))
                 .setIsDebug(true)
                 .setKey(""+call.argument("key"))
                 .setMerchantId(""+call.argument("key"))
