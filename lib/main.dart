@@ -53,14 +53,14 @@ class _MyAppState extends State<MyApp> {
               children: <Widget>[
                 RaisedButton(
                   onPressed: () async {
-                    var data = {"shipping_address": 5, "shop_pickup": false};
                     var headers = {
                       'Content-Type': 'application/json; charset=UTF-8',
                       "auth-token":
-                          'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InRlc3RVc2VyNEBkZWx4LmluIiwiZXhwIjoxNjE5NjE0MTAxfQ.vY4K1AnmovMp_p_k2fMFpH4M4SMQfXp9iDdG_OUrDgM',
+                          <auth-token>,
                     };
-
-                    var url = 'https://api.delx.in/v1/payment/pay';
+                    // Enter your auth token and url to call the api that sends the data that needs to be send to payu money gateway
+                    // Find the required fields here - https://developer.payumoney.com/android/
+                    var url = <url>;
                     var response = await http.post(
                       url,
                       headers: headers,
@@ -72,7 +72,9 @@ class _MyAppState extends State<MyApp> {
 
                     final res =
                         json.decode(response.body.toString())['payload'];
-
+                    
+                    // Decode the data and invoke the method channel
+                    
                     if (response.statusCode == 200) {
                       print("initPayment called");
                       _initPayment(res);
