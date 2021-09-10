@@ -1,6 +1,7 @@
 # pay_test
 
-A new Flutter project.
+PayU Money is a gateway to accept online & offline payments. They provide SDKs to integrate in your app to use as plug-n-play. However such a feature is not available for Flutter apps.
+So I've created this Flutter project where you can add your PayUMoney merchant id and keys to use in your Flutter App. The integration with android is already done via method channel. More improvements can be done.
 
 ## Getting Started
 
